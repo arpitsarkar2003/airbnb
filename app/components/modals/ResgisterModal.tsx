@@ -12,16 +12,19 @@ import {
     useForm
 } from "react-hook-form";
 
-
+import useLoginModal from "../../hooks/useLoginModal";
 import useRegisterModal from "../../hooks/useResgisterModal";
 import Modal from "./Modal";
 import Button from "../Button";
 import Heading from "../Heading";
 import Input from "../inputs/Input";
 
+
 const ResgisterModal = () => {
 
     const registerModal = useRegisterModal();
+    const LoginModal = useLoginModal();
+
     const [isLoading, setIsLoading] = useState(false);
 
     const {
@@ -55,8 +58,8 @@ const ResgisterModal = () => {
 
     const onToggle = useCallback(() => {
         registerModal.onClose();
-        // loginModal.onOpen();
-      }, [registerModal])
+        LoginModal.onOpen();
+      }, [registerModal, LoginModal]);
 
     const bodyContent = (
         <div className="flex flex-col gap-4">

@@ -7,3 +7,34 @@ body,
 :root {
   height: 100%;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 6px;
+}
+
+/* scrollbar */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: transparent; 
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5baba; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #888080; 
+}
+
+.leaflet-bottom,
+.leaflet-control,
+.leaflet-pane,
+.leaflet-top {
+  z-index: 0 !important;
+}
