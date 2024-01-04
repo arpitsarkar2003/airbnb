@@ -263,7 +263,7 @@ const RentModal = () => {
 
     return (
         <Modal
-            title="Airbnb your home"
+            title="Become Host"
             isOpen={rentModal.isOpen}
             onClose={rentModal.onClose}
             onSubmit={handleSubmit(onSubmit)}

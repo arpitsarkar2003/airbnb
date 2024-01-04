@@ -8,6 +8,7 @@ import ToasterProvider from './providers/ToasterProvider'
 import LoginModal from './components/modals/LoginModal'
 import getCurrentUser from './actions/getCurrentUser'
 import RentModal from './components/modals/RentModal'
+import SearchModal from './components/modals/SearchModal'
 
 
 export const metadata = {
@@ -24,13 +25,18 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={font.className}>
-        <ClientOnly>
-          <ToasterProvider />
-          <RentModal/>
-          <LoginModal />
-          <ResgisterModal />
+        <ClientOnly>  
           {/* @ts-ignore */}
           <Navbar currentUser={currentUser} />
+          <ToasterProvider />
+          <LoginModal />
+          
+          
+          <ResgisterModal />
+         
+         
+          <RentModal />
+          <SearchModal />
         </ClientOnly>
         <div className='pb-20 pt-28'>
            {children}
