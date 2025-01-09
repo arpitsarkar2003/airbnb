@@ -26,11 +26,13 @@ export const categories = [
     label: 'Beach',
     icon: TbBeach,
     description: 'This property is close to the beach!',
+    // horizontal: true
   },
   {
     label: 'Windmills',
     icon: GiWindmill,
     description: 'This property is has windmills!',
+    // horizontal: true
   },
   {
     label: 'Modern',
@@ -105,9 +107,20 @@ const Categories = () => {
   const pathname = usePathname();
   const isMainPage = pathname === '/';
 
+
+
   if (!isMainPage) {
     return null;
   }
+
+  // useEffect(() => {
+  //   const getdata  = async() => {
+  //    const c1data = await fetch('https://jsonplaceholder.typicode.com/todos/1').then((res) => res.json()).then((data) => console.log(data));
+  //    const c2data = await fetch('https://jsonplaceholder.typicode.com/todos/1').then((res) => res.json()).then((data) => console.log(data));
+  //    const c3data = await fetch('https://jsonplaceholder.typicode.com/todos/1').then((res) => res.json()).then((data) => console.log(data));
+  //   }
+  //   getdata();
+  // },[])
 
   return (
     <Container>
@@ -126,6 +139,7 @@ const Categories = () => {
             key={item.label}
             label={item.label}
             icon={item.icon}
+            // horizontal={item.horizontal}
             selected={category === item.label}
           />
         ))}
